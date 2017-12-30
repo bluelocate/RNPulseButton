@@ -1,0 +1,11 @@
+framework module RNPulseButton {
+  umbrella header "RNPulseButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RNPulseButton.Swift {
+    header "RNPulseButton-Swift.h"
+    requires objc
+}

@@ -1,0 +1,10 @@
+framework module RNPulseButton {
+  umbrella header "RNPulseButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module RNPulseButton.__Swift {
+    exclude header "RNPulseButton-Swift.h"
+}

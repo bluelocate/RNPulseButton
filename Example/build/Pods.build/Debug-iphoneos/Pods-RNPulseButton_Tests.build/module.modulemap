@@ -1,0 +1,11 @@
+framework module Pods_RNPulseButton_Tests {
+  umbrella header "Pods-RNPulseButton_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Pods_RNPulseButton_Tests.Swift {
+    header "Pods_RNPulseButton_Tests-Swift.h"
+    requires objc
+}

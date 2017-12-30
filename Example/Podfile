@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RNPulseButton_Example' do
+  pod 'RNPulseButton', :path => '../'
+
+  target 'RNPulseButton_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

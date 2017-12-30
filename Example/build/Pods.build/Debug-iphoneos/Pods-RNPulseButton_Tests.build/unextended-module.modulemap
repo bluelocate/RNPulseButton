@@ -1,0 +1,10 @@
+framework module Pods_RNPulseButton_Tests {
+  umbrella header "Pods-RNPulseButton_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module Pods_RNPulseButton_Tests.__Swift {
+    exclude header "Pods_RNPulseButton_Tests-Swift.h"
+}

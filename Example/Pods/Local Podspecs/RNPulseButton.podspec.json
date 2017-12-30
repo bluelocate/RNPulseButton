@@ -1,0 +1,22 @@
+{
+  "name": "RNPulseButton",
+  "version": "0.1.0",
+  "summary": "A short description of RNPulseButton.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/bluelocate/RNPulseButton",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "bluelocate": "Ryan@protopie.io"
+  },
+  "source": {
+    "git": "https://github.com/bluelocate/RNPulseButton.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RNPulseButton/Classes/**/*"
+}
