@@ -12,7 +12,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## At a Glance
 Create Cusom Pulse
 
-StoryBoard : Just make it!
+StoryBoard : Just make it! Adjust property from storyboard inspector
 
 Programmatically
 ``` swift
