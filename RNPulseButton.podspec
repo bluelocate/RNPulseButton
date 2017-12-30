@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RNPulseButton'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'Easy and Customizable Pulse Animation Effect Button!'
   s.description      = 'Easy and Customizable Pulse Animation Effect Button! Be Simple and convenience.'
   s.homepage         = 'https://github.com/bluelocate/RNPulseButton'

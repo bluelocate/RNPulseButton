@@ -8,55 +8,56 @@
 
 import UIKit
 
-class RNPulseButton: UIControl {
-    private let buttonImageLayer = CALayer()
-    private var pulseLayers: [CALayer] = []
-    @IBInspectable var pulseRadius: Double = 50 {
+open class RNPulseButton: UIControl {
+    fileprivate let buttonImageLayer = CALayer()
+    fileprivate var pulseLayers: [CALayer] = []
+    
+    @IBInspectable open var pulseRadius: Double = 50 {
         didSet {
             updateRadius()
         }
     }
-    @IBInspectable var pulseCount: Int = 2 {
+    @IBInspectable open var pulseCount: Int = 2 {
         didSet {
             updateCount()
         }
     }
-    @IBInspectable var pulseDuration: Double = 2 {
+    @IBInspectable open var pulseDuration: Double = 2 {
         didSet {
             updateAnimation()
         }
     }
-    @IBInspectable var intervalTime: Double = 0.4 {
+    @IBInspectable open var intervalTime: Double = 0.4 {
         didSet {
             updateAnimation()
         }
     }
-    @IBInspectable var scaleFactor: CGFloat = 2.24 {
+    @IBInspectable open var scaleFactor: CGFloat = 2.24 {
         didSet {
             updateAnimation()
         }
     }
-    @IBInspectable var repeatCount: Int = 100 {
+    @IBInspectable open var repeatCount: Int = 100 {
         didSet {
             updateAnimation()
         }
     }
-    @IBInspectable var pulseColor: UIColor = UIColor.gray {
+    @IBInspectable open var pulseColor: UIColor = UIColor.gray {
         didSet {
             updateColor()
         }
     }
-    @IBInspectable var normalImage: UIImage? {
+    @IBInspectable open var normalImage: UIImage? {
         didSet {
             buttonImageLayer.contents = normalImage?.cgImage
         }
     }
-    @IBInspectable var selectedImage: UIImage? {
+    @IBInspectable open var selectedImage: UIImage? {
         didSet {
             buttonImageLayer.contents = selectedImage?.cgImage
         }
     }
-    convenience init(frame: CGRect,pulseRadius: Double, pulseCount: Int, pulseDuration: Double, intervalTime: Double, scaleFactor: CGFloat, repeatCount: Int, pulseColor: UIColor, normalImage: UIImage?, selectedImage: UIImage?) {
+    convenience public init(frame: CGRect,pulseRadius: Double, pulseCount: Int, pulseDuration: Double, intervalTime: Double, scaleFactor: CGFloat, repeatCount: Int, pulseColor: UIColor, normalImage: UIImage?, selectedImage: UIImage?) {
         self.init(frame: frame)
         self.pulseRadius = pulseRadius
         self.pulseCount = pulseCount
@@ -67,9 +68,10 @@ class RNPulseButton: UIControl {
         self.pulseColor = pulseColor
         self.normalImage = normalImage
         self.selectedImage = selectedImage
-        
+        updateColor()
+        updateCount()
     }
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.frame = frame
         self.backgroundColor = UIColor.clear
@@ -78,7 +80,7 @@ class RNPulseButton: UIControl {
         initImageLayer()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.backgroundColor = UIColor.clear
         self.isUserInteractionEnabled = true
@@ -86,7 +88,7 @@ class RNPulseButton: UIControl {
         initImageLayer()
     }
     
-    func start() {
+    open func start() {
         buttonImageLayer.contents = normalImage?.cgImage
         
         for layer in pulseLayers {
@@ -100,7 +102,7 @@ class RNPulseButton: UIControl {
         self.layer.insertSublayer(buttonImageLayer, at: UInt32(pulseLayers.count + 1))
     }
     
-    func stop() {
+    open func stop() {
         for layer in pulseLayers {
             layer.removeAllAnimations()
         }
@@ -109,7 +111,7 @@ class RNPulseButton: UIControl {
     
     //MARK: Private Functions
     
-    private func updateRadius() {
+    fileprivate func updateRadius() {
         for layer in pulseLayers {
             layer.frame.origin = CGPoint.zero
             layer.frame.size = CGSize(width: pulseRadius, height: pulseRadius)
@@ -118,7 +120,7 @@ class RNPulseButton: UIControl {
         buttonImageLayer.frame.size = CGSize(width: pulseRadius, height: pulseRadius)
     }
     
-    private func updateCount() {
+    fileprivate func updateCount() {
         for layer in pulseLayers {
             layer.removeFromSuperlayer()
         }
@@ -127,18 +129,18 @@ class RNPulseButton: UIControl {
         start()
     }
     
-    private func updateColor() {
+    fileprivate func updateColor() {
         for layer in pulseLayers {
-            layer.backgroundColor = self.pulseColor.cgColor
+            layer.backgroundColor = pulseColor.cgColor
         }
     }
     
-    private func updateAnimation() {
+    fileprivate func updateAnimation() {
         stop()
         start()
     }
     
-    private func initImageLayer() {
+    fileprivate func initImageLayer() {
         buttonImageLayer.contents = selectedImage?.cgImage
         buttonImageLayer.frame.origin = CGPoint.zero
         buttonImageLayer.frame.size = CGSize(width: pulseRadius, height: pulseRadius)
@@ -150,7 +152,7 @@ class RNPulseButton: UIControl {
         self.layer.addSublayer(buttonImageLayer)
     }
     
-    private func initPulseLayer() {
+    fileprivate func initPulseLayer() {
         for _ in 0..<pulseCount {
             let layer = CALayer()
             layer.frame.origin = CGPoint.zero
@@ -164,7 +166,7 @@ class RNPulseButton: UIControl {
     }
 }
 
-extension CABasicAnimation {
+public extension CABasicAnimation {
     func makeAnimation(keyPath: String?, duration: Double, from: CGFloat, to: CGFloat, beginTime: Double, timing: String?, repeatCount: Float) -> CABasicAnimation {
         let animation = CABasicAnimation()
         animation.keyPath = keyPath

@@ -22,7 +22,7 @@ pod 'RNPulseButton'
 
 ## Author
 
-bluelocate, planon21@gmail.com
+Rodo, planon21@gmail.com
 
 ## License
 

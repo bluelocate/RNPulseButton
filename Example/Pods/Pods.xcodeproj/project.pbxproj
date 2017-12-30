@@ -14,7 +14,7 @@
 		5313C232329854FE6BB25AD7D4338A25 /* RNPulseButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7A5AEC16AF1EC958E261CBD689EB66F /* RNPulseButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BBC8C06C303DD39F6D53E8533362788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		6EE71A716CA4FB2DBDCF805A20C79AA7 /* Pods-RNPulseButton_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3765C42BBEF40707BE49C4EDB0932FC7 /* Pods-RNPulseButton_Tests-dummy.m */; };
-		BEC099161FF7D2EA00139894 /* RNPulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD444B1FF7BB6F005A6E78 /* RNPulseButton.swift */; };
+		BE3526D01FF7ECD700EB3466 /* RNPulseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD444B1FF7BB6F005A6E78 /* RNPulseButton.swift */; };
 		C689901885BF7EDFFBBDB057A01251EE /* Pods-RNPulseButton_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8E2DEE28C61CFD484399B3DD6EBF06 /* Pods-RNPulseButton_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8BB36C53135C957498C6FA374888C12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -335,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				049BA515B7A35E45ACD0CEBDDFB6C9C0 /* RNPulseButton-dummy.m in Sources */,
-				BEC099161FF7D2EA00139894 /* RNPulseButton.swift in Sources */,
+				BE3526D01FF7ECD700EB3466 /* RNPulseButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
