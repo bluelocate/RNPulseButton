@@ -49,11 +49,13 @@ open class RNPulseButton: UIControl {
     }
     @IBInspectable open var normalImage: UIImage? {
         didSet {
+            buttonImageLayer.frame.size = CGSize(width: pulseRadius, height: pulseRadius)
             buttonImageLayer.contents = normalImage?.cgImage
         }
     }
     @IBInspectable open var selectedImage: UIImage? {
         didSet {
+            buttonImageLayer.frame.size = CGSize(width: pulseRadius, height: pulseRadius)
             buttonImageLayer.contents = selectedImage?.cgImage
         }
     }
@@ -141,7 +143,7 @@ open class RNPulseButton: UIControl {
     }
     
     fileprivate func initImageLayer() {
-        buttonImageLayer.contents = selectedImage?.cgImage
+        buttonImageLayer.contents = normalImage?.cgImage
         buttonImageLayer.frame.origin = CGPoint.zero
         buttonImageLayer.frame.size = CGSize(width: pulseRadius, height: pulseRadius)
         buttonImageLayer.shadowOffset = CGSize(width: 0, height: 4)

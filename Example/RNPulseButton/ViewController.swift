@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var pulse2: RNPulseButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        pulse2 = RNPulseButton(frame: CGRect(x: 150, y: 300, width: 100, height: 100),
+        pulse2 = RNPulseButton(frame: CGRect(x: self.view.frame.width / 2 - 50, y: self.view.frame.height / 2, width: 100, height: 100),
                                pulseRadius: 100,
                                pulseCount: 4,
                                pulseDuration: 3,
@@ -32,7 +32,8 @@ class ViewController: UIViewController {
     
     @IBAction func touchEvent(_ sender: RNPulseButton) {
         pulse1.stop()
-        pulse2.backgroundColor = UIColor.red
+        pulse2.pulseColor = UIColor.green
+        pulse2.normalImage = #imageLiteral(resourceName: "ic-success")
     }
     
     override func didReceiveMemoryWarning() {
