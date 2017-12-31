@@ -1,5 +1,5 @@
 PODS:
-  - RNPulseButton (0.1.0)
+  - RNPulseButton (0.5.0)
 
 DEPENDENCIES:
   - RNPulseButton (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RNPulseButton: a06c34a5e5cae1c6747e4b885e9bb6c1bde6f6c6
+  RNPulseButton: d4dd45592721dc5f5a60be6b2771701e02c25ddf
 
 PODFILE CHECKSUM: 525afbf75e385646bc82e80f42c5d7ba8155c73e
 
