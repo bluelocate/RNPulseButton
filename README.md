@@ -11,11 +11,20 @@ Easy and Customizable iOS Pulse Animation Effect
 
 ![Example gif](https://media.giphy.com/media/xUNd9Meox7k0MaSQSI/giphy.gif)
 
+## Installation
+
+RNPulseButton is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'RNPulseButton'
+```
+
 ## At a Glance
 
 ### Create Cusom Pulse
 
-StoryBoard : Just make it! Adjust property from storyboard inspector
+#### StoryBoard : Just make it! Adjust property from storyboard inspector
 
 #### Programmatically
 ``` swift
@@ -53,14 +62,6 @@ pulse2.stop()
     pulseColor: UIColor     // Set Pulse Color
     normalImage: UIImage?   // (Optional) Set Normal State Image
     selectedImage: UIImage? // (Optional) Set Selected State Image
-```
-## Installation
-
-RNPulseButton is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'RNPulseButton'
 ```
 
 ## Author
