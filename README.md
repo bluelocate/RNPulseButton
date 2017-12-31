@@ -13,11 +13,11 @@ Easy and Customizable iOS Pulse Animation Effect
 
 ## At a Glance
 
-###Create Cusom Pulse
+### Create Cusom Pulse
 
 StoryBoard : Just make it! Adjust property from storyboard inspector
 
-####Programmatically
+#### Programmatically
 ``` swift
 let pulse2 = RNPulseButton(frame: CGRect(x: 150, y: 300, width: 100, height: 100),
                            pulseRadius: 100,
@@ -30,19 +30,19 @@ let pulse2 = RNPulseButton(frame: CGRect(x: 150, y: 300, width: 100, height: 100
                            normalImage: nil, selectedImage: nil)
 ```
 
-####Animation Start
+#### Animation Start
 
 ```swift
 pulse2.start()
 ```
 
-####Animation Stop
+#### Animation Stop
 
 ```swift
 pulse2.stop()
 ```
 
-####Customizable Property
+#### Customizable Property
 ```swift
     pulseRadius: Double     // Pulse Radius
     pulseCount: Int         // Number of Pulse
