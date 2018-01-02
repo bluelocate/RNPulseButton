@@ -5,8 +5,8 @@
 [![Version](https://img.shields.io/cocoapods/v/RNPulseButton.svg?style=flat)](http://cocoapods.org/pods/RNPulseButton)
 [![License](https://img.shields.io/cocoapods/l/RNPulseButton.svg?style=flat)](http://cocoapods.org/pods/RNPulseButton)
 
-Easy and Customizable iOS Pulse Animation Effect
-
+Easy and Customizable iOS Pulse Animation Effect.
+You can connect Action(TouchUpInside) in storyboard(Like UIButton).
 ## Demo
 
 ![Example gif](https://media.giphy.com/media/xUNd9Meox7k0MaSQSI/giphy.gif)
