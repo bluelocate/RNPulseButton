@@ -10,6 +10,7 @@ import UIKit
 import RNPulseButton
 
 class ViewController: UIViewController {
+    
     @IBOutlet var pulse1: RNPulseButton!
     @IBOutlet var red: UISlider!
     @IBOutlet var green: UISlider!
@@ -78,7 +79,5 @@ class ViewController: UIViewController {
     @IBAction func color(_ sender: UISlider) {
         pulse1.pulseColor = UIColor.init(red: CGFloat(red.value), green: CGFloat(green.value), blue: CGFloat(blue.value), alpha: 1)
     }
-    
-    
 }
 

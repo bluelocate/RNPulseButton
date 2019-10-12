@@ -1,0 +1,6 @@
+framework module RNPulseButton {
+  umbrella header "RNPulseButton-umbrella.h"
+
+  export *
+  module * { export * }
+}

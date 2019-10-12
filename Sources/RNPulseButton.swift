@@ -94,10 +94,10 @@ open class RNPulseButton: UIControl {
         buttonImageLayer.contents = normalImage?.cgImage
         
         for layer in pulseLayers {
-            guard let index = pulseLayers.index(of: layer) else { return }
+            guard let index = pulseLayers.firstIndex(of: layer) else { return }
             let multiplier = Double(index)
-            let pulseAnimation = CABasicAnimation().makeAnimation(keyPath: "transform.scale", duration: pulseDuration, from: 0, to: scaleFactor, beginTime: intervalTime * multiplier, timing: kCAMediaTimingFunctionDefault, repeatCount: Float(repeatCount))
-            let opacityAnimation = CABasicAnimation().makeAnimation(keyPath: "opacity", duration: pulseDuration, from: 1, to: 0, beginTime: intervalTime * multiplier, timing: kCAMediaTimingFunctionDefault, repeatCount: Float(repeatCount))
+            let pulseAnimation = CABasicAnimation().makeAnimation(keyPath: "transform.scale", duration: pulseDuration, from: 0, to: scaleFactor, beginTime: intervalTime * multiplier, timing: convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.default), repeatCount: Float(repeatCount))
+            let opacityAnimation = CABasicAnimation().makeAnimation(keyPath: "opacity", duration: pulseDuration, from: 1, to: 0, beginTime: intervalTime * multiplier, timing: convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.default), repeatCount: Float(repeatCount))
             layer.add(pulseAnimation, forKey: "transform.scale")
             layer.add(opacityAnimation, forKey: "opacity")
         }
@@ -175,9 +175,19 @@ public extension CABasicAnimation {
         animation.duration = duration
         animation.fromValue = from
         animation.toValue = to
-        animation.timingFunction = CAMediaTimingFunction(name: timing ?? kCAMediaTimingFunctionDefault)
+        animation.timingFunction = CAMediaTimingFunction(name: convertToCAMediaTimingFunctionName(timing ?? convertFromCAMediaTimingFunctionName(CAMediaTimingFunctionName.default)))
         animation.repeatCount = repeatCount
         animation.beginTime = CACurrentMediaTime() + beginTime
         return animation
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCAMediaTimingFunctionName(_ input: CAMediaTimingFunctionName) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAMediaTimingFunctionName(_ input: String) -> CAMediaTimingFunctionName {
+	return CAMediaTimingFunctionName(rawValue: input)
 }
