@@ -9,7 +9,7 @@ Easy and Customizable iOS Pulse Animation Effect.
 You can connect Action(TouchUpInside) in storyboard(Like UIButton).
 ## Demo
 
-![Example gif](https://media.giphy.com/media/xUNd9Meox7k0MaSQSI/giphy.gif)
+![Example gif](https://media.giphy.com/media/XbOWESMj2kzP2YPIaP/giphy.gif)
 
 ## Installation
 
